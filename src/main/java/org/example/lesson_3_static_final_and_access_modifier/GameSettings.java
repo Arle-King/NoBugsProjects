@@ -1,9 +1,9 @@
 package org.example.lesson_3_static_final_and_access_modifier;
 
 public class GameSettings {
-    static int maxPlayers;
-    final String gameName;
-    int currentPlayers;
+    private static int maxPlayers;
+    private final String gameName;
+    private int currentPlayers;
 
     public GameSettings(String gameName) {
         this.gameName = gameName;

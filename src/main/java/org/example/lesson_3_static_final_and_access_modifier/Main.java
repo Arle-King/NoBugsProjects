@@ -33,7 +33,7 @@ public class Main {
         GameSettings firstGame = new GameSettings("Doka 2");
         GameSettings secondGame = new GameSettings( "WarFace");
 
-        GameSettings.maxPlayers = 30;
+        GameSettings.setMaxPlayers(30);
 
         firstGame.addPlayer();
         firstGame.addPlayer();
