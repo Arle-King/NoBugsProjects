@@ -8,14 +8,19 @@ public class Task_1 {
         Scanner scanner = new Scanner(System.in);
         int x;
         x = scanner.nextInt();
-
         int sum = 1;
 
-        while(x != 1) {
-            sum = sum * x;
-            x--;
-        }
+        if (x < 0){
+            System.out.println("Факториал не отпределён");
+        } else if (x > 1) {
+            while(x != 1) {
+                sum = sum * x;
+                x--;
+            }
 
-        System.out.println(sum);
+            System.out.println(sum);
+        } else {
+            System.out.println(sum);
+        }
     }
 }

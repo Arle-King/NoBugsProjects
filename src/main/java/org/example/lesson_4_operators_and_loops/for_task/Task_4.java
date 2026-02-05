@@ -8,13 +8,16 @@ public class Task_4 {
         Scanner scanner = new Scanner(System.in);
         int x;
         x = scanner.nextInt();
-        boolean isPrime = false;
+        boolean isPrime = true;
 
-        for (int i = 2; i < x / 2; i++) {
-            if (x % i == 0) isPrime = true;
+        for (int i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                isPrime = false;
+                break;
+            }
         }
 
-        if (!isPrime) {
+        if (isPrime) {
             System.out.println("Число простое");
         } else {
             System.out.println("Число не простое");

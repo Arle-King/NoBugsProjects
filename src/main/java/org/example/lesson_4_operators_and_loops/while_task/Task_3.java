@@ -9,11 +9,11 @@ public class Task_3 {
         int x;
         x = scanner.nextInt();
 
-        while (x < 1) {
+        while (x < 0) {
             x = scanner.nextInt();
         }
 
-        while(x != 0) {
+        while(x > 0) {
             System.out.println(x);
             x--;
         }

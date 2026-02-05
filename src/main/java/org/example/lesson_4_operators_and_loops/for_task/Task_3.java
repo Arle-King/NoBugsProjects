@@ -9,7 +9,7 @@ public class Task_3 {
         int x;
         x = scanner.nextInt();
 
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 11; i++) {
             System.out.println(x + "x" + i + "=" + x * i);
         }
     }

@@ -8,13 +8,15 @@ public class Task_3 {
         Scanner scanner = new Scanner(System.in);
         int x;
 
-        do {
+        while (true) {
             x = scanner.nextInt();
             if (x < 0) {
-                x = 1;
                 continue;
+            } else if (x == 0) {
+                break;
             }
             System.out.println(x);
-        } while (x > 0);
+        }
+        System.out.println("Конец");
     }
 }

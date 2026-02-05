@@ -8,10 +8,13 @@ public class Task_2 {
         Scanner scanner = new Scanner(System.in);
         int x;
         x = scanner.nextInt();
+        int i = 1;
 
-        while(x != 1) {
-            System.out.println(x);
-            x--;
+        while(i!=x && x > 0) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
         }
     }
 }

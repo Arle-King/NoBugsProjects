@@ -7,12 +7,12 @@ public class Task_4 {
 
         Scanner scanner = new Scanner(System.in);
         String x;
-        x = scanner.nextLine();
 
         while (true) {
-            if (x.equals("stop")) break;
+            x = scanner.nextLine();
+            if (x.equalsIgnoreCase("stop")) break;
         }
 
-        System.out.println();
+        System.out.println("Конец");
     }
 }
