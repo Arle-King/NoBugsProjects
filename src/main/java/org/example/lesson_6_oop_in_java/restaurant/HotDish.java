@@ -11,7 +11,7 @@ public class HotDish extends Dish {
     }
 
     @Override
-    public void getDescription() {
+    public void getDish() {
         System.out.println("Название: " + name + " с температурой: " + temperature);
     }
 }

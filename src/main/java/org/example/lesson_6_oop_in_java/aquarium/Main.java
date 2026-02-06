@@ -6,10 +6,8 @@ public class Main {
         Animal shark = new Shark();
         Animal starfish = new Starfish();
 
-        aquarium.setAnimal(shark);
-        aquarium.animalPrint();
-
-        aquarium.setAnimal(starfish);
-        aquarium.animalPrint();
+        aquarium.addAnimal(shark);
+        aquarium.addAnimal(starfish);
+        aquarium.printAnimals();
     }
 }

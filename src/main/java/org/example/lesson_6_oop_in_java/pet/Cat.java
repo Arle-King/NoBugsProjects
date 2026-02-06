@@ -2,7 +2,7 @@ package org.example.lesson_6_oop_in_java.pet;
 
 public class Cat extends Animal{
     @Override
-    public void Feed() {
+    public void feed() {
         System.out.println("Кошка ест влажный корм");
     }
 

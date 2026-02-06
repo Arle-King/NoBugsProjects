@@ -7,12 +7,8 @@ public class Main {
         Animal cat = new Cat();
         Animal dog = new Dog();
 
-        system.setAnimal(cat);
-        system.Feed();
-        system.care();
-
-        system.setAnimal(dog);
-        system.Feed();
-        system.care();
+        system.addAnimal(cat);
+        system.addAnimal(dog);
+        system.printPets();
     }
 }

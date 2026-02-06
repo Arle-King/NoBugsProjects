@@ -1,18 +1,21 @@
 package org.example.lesson_6_oop_in_java.park;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Park {
 
-    private Attraction attraction;
+    private List<Attraction> attraction = new ArrayList<>();
 
-    public void setAttraction(Attraction attraction) {
-        this.attraction = attraction;
+    public void addAttraction(Attraction attraction) {
+        this.attraction.add(attraction);
     }
 
-    public void printInfo() {
-        this.attraction.printInfo();
+    public void printAttractionsInfo() {
+        attraction.forEach(Attraction::printInfo);
     }
 
-    public void maintain() {
-        this.attraction.maintain();
+    public void maintainAttractions() {
+        attraction.forEach(Attraction::maintain);
     }
 }

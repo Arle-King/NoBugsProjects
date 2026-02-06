@@ -7,13 +7,11 @@ public class Main {
         Animal cow = new Cow();
         Animal chicken = new Chicken();
 
-        farm.setAnimal(cow);
-        farm.care();
-        farm.harvesting();
+        farm.addAnimal(cow);
+        farm.addAnimal(chicken);
 
-        farm.setAnimal(chicken);
-        farm.care();
-        farm.harvesting();
+        farm.feedAllAnimals();
+        farm.careAllAnimals();
 
     }
 }

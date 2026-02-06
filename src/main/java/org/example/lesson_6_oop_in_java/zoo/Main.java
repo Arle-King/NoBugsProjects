@@ -6,12 +6,9 @@ public class Main {
         Animal elephant = new Elephant();
         Animal bird = new Bird();
 
-        zoo.setAnimal(elephant);
-        zoo.animalSound();
-        zoo.animalMove();
+        zoo.addAnimal(elephant);
+        zoo.addAnimal(bird);
 
-        zoo.setAnimal(bird);
-        zoo.animalSound();
-        zoo.animalMove();
+        zoo.printAnimals();
     }
 }

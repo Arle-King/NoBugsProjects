@@ -1,17 +1,19 @@
 package org.example.lesson_6_oop_in_java.zoo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Zoo {
-    private Animal animal;
+    private List<Animal> animal = new ArrayList<>();
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    public void addAnimal(Animal animal) {
+        this.animal.add(animal);
     }
 
-    public void animalSound() {
-        this.animal.animalSound();
-    }
-
-    public void animalMove() {
-        this.animal.animalMove();
+    public void printAnimals() {
+        this.animal.forEach(animal -> {
+            animal.animalSound();
+            animal.animalMove();
+        });
     }
 }

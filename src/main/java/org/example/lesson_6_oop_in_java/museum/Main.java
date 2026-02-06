@@ -7,12 +7,11 @@ public class Main {
         Exhibit manuscript = new Manuscript();
         Exhibit sculpture = new Sculpture();
 
-        museum.setExhibit(manuscript);
-        museum.printInfo();
-        museum.printCare();
+        museum.addExhibit(manuscript);
+        museum.addExhibit(sculpture);
 
-        museum.setExhibit(sculpture);
-        museum.printInfo();
-        museum.printCare();
+        museum.printExhibitsInfo();
+        museum.printExhibitsCare();
+
     }
 }

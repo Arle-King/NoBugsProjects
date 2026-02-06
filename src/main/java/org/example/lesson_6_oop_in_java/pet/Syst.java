@@ -1,18 +1,20 @@
 package org.example.lesson_6_oop_in_java.pet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Syst {
 
-    private Animal animal;
+    private List<Animal> animal = new ArrayList<>();
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    public void addAnimal(Animal animal) {
+        this.animal.add(animal);
     }
 
-    public void Feed() {
-        this.animal.Feed();
-    }
-
-    public void care() {
-        this.animal.care();
+    public void printPets() {
+        this.animal.forEach(animal -> {
+            animal.feed();
+            animal.care();
+        });
     }
 }

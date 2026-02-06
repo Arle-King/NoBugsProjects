@@ -1,14 +1,19 @@
 package org.example.lesson_6_oop_in_java.aquarium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aquarium {
 
-    private Animal animal;
+    private List<Animal> animal = new ArrayList<>();
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    public void addAnimal(Animal animal) {
+        this.animal.add(animal);
     }
 
-    public void animalPrint() {
-        animal.print();
+    public void printAnimals() {
+        this.animal.forEach(animal -> {
+            animal.printBehaviour();
+        });
     }
 }

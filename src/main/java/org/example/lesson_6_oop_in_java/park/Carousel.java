@@ -2,12 +2,12 @@ package org.example.lesson_6_oop_in_java.park;
 
 public class Carousel extends Attraction {
     @Override
-    void printInfo() {
-        System.out.println("Для детей");
+    public void printInfo() {
+        System.out.println("Карусель для детей");
     }
 
     @Override
-    void maintain() {
-        System.out.println("Техническое обслуживание");
+    public void maintain() {
+        System.out.println("Карусель требует техническое обслуживание");
     }
 }

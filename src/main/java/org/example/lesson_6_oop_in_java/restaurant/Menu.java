@@ -13,7 +13,7 @@ public class Menu {
 
     public void printMenu() {
         for (Dish dish : this.list) {
-            dish.getDescription();
+            dish.getDish();
         }
     }
 }

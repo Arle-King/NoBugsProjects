@@ -1,17 +1,20 @@
 package org.example.lesson_6_oop_in_java.museum;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Museum {
-    private Exhibit exhibit;
+    private List<Exhibit> exhibit = new ArrayList<>();
 
-    public void setExhibit(Exhibit exhibit) {
-        this.exhibit = exhibit;
+    public void addExhibit(Exhibit exhibit) {
+        this.exhibit.add(exhibit);
     }
 
-    public void printInfo() {
-        this.exhibit.printInfo();
+    public void printExhibitsInfo() {
+        this.exhibit.forEach(Exhibit::printInfo);
     }
 
-    public void printCare() {
-        this.exhibit.printCare();
+    public void printExhibitsCare() {
+        this.exhibit.forEach(Exhibit::printCare);
     }
 }

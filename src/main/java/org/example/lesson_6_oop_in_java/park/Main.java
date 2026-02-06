@@ -7,12 +7,10 @@ public class Main {
         Attraction rollerCoaster = new RollerCoaster();
         Attraction carousel = new Carousel();
 
-        park.setAttraction(rollerCoaster);
-        park.printInfo();
-        park.maintain();
+        park.addAttraction(rollerCoaster);
+        park.addAttraction(carousel);
 
-        park.setAttraction(carousel);
-        park.printInfo();
-        park.maintain();
+        park.printAttractionsInfo();
+        park.maintainAttractions();
     }
 }

@@ -11,7 +11,7 @@ public class Drink extends Dish {
     }
 
     @Override
-    public void getDescription() {
+    public void getDish() {
         System.out.println("Название: " + name + " с объёмом: " + volume);
     }
 }

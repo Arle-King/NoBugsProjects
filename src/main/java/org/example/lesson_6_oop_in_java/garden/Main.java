@@ -7,10 +7,9 @@ public class Main {
         Plant orchid = new Orchid();
         Plant cactus = new Cactus();
 
-        garden.setPlant(orchid);
-        garden.printCare();
+        garden.addPlant(orchid);
+        garden.addPlant(cactus);
 
-        garden.setPlant(cactus);
-        garden.printCare();
+        garden.printPlants();
     }
 }

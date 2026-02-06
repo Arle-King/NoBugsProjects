@@ -1,17 +1,20 @@
 package org.example.lesson_6_oop_in_java.farm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Farm {
-    private Animal animal;
+    private List<Animal> animal = new ArrayList<>();
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    public void addAnimal(Animal animal) {
+        this.animal.add(animal);
     }
 
-    public void harvesting() {
-        this.animal.harvesting();
+    public void feedAllAnimals() {
+        animal.forEach(Animal::harvesting);
     }
 
-    public void care() {
-        this.animal.care();
+    public void careAllAnimals() {
+        animal.forEach(Animal::care);
     }
 }
