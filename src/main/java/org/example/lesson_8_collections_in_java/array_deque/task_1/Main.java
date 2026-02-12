@@ -1,6 +1,7 @@
 package org.example.lesson_8_collections_in_java.array_deque.task_1;
 
 import java.util.ArrayDeque;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
