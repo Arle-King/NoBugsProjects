@@ -12,6 +12,24 @@
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.junit.jupiter.version>5.8.2</org.junit.jupiter.version>
     </properties>
+
+    <dependencies>
+        <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${org.junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
