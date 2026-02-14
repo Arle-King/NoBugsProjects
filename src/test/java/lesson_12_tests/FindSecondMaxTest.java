@@ -44,6 +44,4 @@ public class FindSecondMaxTest {
     public void findSecondMaxThrowsTest(int[] numder, Class classException) {
         Assertions.assertThrows(classException, () -> findSecondMax.findSecondMax(numder));
     }
-
-
 }
