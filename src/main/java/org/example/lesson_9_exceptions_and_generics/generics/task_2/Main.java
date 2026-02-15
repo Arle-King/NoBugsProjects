@@ -13,6 +13,6 @@ public class Main {
     }
 
     public static  <T> void printArray(T[] arr) {
-        System.out.println(Arrays.toString(Arrays.stream(arr).toArray()));
+        System.out.println(Arrays.toString(arr));
     }
 }

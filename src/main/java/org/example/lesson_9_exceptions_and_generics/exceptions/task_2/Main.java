@@ -12,9 +12,6 @@ public class Main {
 
     public static void division(int x, int y) {
         try {
-            if (y == 0) {
-                throw new ArithmeticException("На ноль делить нельзя!");
-            }
             System.out.println((double) x/y);
         } catch (ArithmeticException e) {
             System.out.println("Ошибка вычисления! " + e.getMessage());
