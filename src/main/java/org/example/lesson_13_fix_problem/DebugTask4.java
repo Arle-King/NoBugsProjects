@@ -1,15 +1,13 @@
 package org.example.lesson_13_fix_problem;
 
 public class DebugTask4 {
-    public static void main(String[] args) {
 
-        try {
-            System.out.println(isPalindrome(null));
-        } catch (NullPointerException e) {
-            System.out.println("null");
-        }
+    public static void main(String[] args) {
+        System.out.println(isPalindrome(null));
     }
+
     public static boolean isPalindrome(String str) {
+        if (str == null) return false;
         String reversed = new StringBuilder(str).reverse().toString();
         return str.equals(reversed);
     }

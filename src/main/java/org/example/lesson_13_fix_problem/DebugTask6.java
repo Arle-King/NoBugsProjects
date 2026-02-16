@@ -5,7 +5,7 @@ public class DebugTask6 {
         countdown(5);
     }
     public static void countdown(int n) {
-        if (n != 1) {
+        if (n > 1) {
             System.out.println(n);
             countdown(n - 1);
         } else {
