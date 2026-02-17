@@ -10,7 +10,7 @@ public class Main {
         String firstB = list.stream()
                 .filter(el -> el.startsWith("Б"))
                 .findFirst()
-                .get();
+                .orElse("");
 
         System.out.println(firstB);
     }
