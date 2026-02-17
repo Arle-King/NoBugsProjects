@@ -1,7 +1,5 @@
 package org.example.lesson_14_complex_task.task_2;
 
-import org.example.lesson_9_exceptions_and_generics.exceptions.task_3.AgeException;
-
 import java.util.Objects;
 
 public class UserValidator <T extends User> {
