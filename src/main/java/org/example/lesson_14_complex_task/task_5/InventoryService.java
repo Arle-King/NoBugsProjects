@@ -25,7 +25,7 @@ public class InventoryService {
 
     public List<Product> getProducts (String category) {
         if (!isInventoryOpen) {
-            return null;
+            throw new OutOfStockException("Склад закрыт");
         }
         if (!map.containsKey(category)) {
             throw new OutOfStockException("Такой категории не существует");
@@ -39,6 +39,9 @@ public class InventoryService {
 
     //Страшно, очень страшно, но работает
     public List<Product> filterByPrice(int min, int max) {
+        if (!isInventoryOpen) {
+            throw new OutOfStockException("Склад закрыт");
+        }
         return map.entrySet()
                 .stream()
                 .filter(e -> e.getValue()

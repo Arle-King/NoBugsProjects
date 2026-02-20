@@ -62,8 +62,8 @@ public class TaskServiceTest {
 
         softAssertions.assertThat(taskService.getPriorityQueue().peek()).as("").isEqualTo(task2);
 
-        softAssertions.assertThat(taskService.sortAbcByDate().peek()).as("").isEqualTo(task3);
-        softAssertions.assertThat(taskService.sortDeskByDate().peek()).as("").isEqualTo(task2);
+        softAssertions.assertThat(taskService.sortAbcByDate().get(0)).as("").isEqualTo(task3);
+        softAssertions.assertThat(taskService.sortDeskByDate().get(0)).as("").isEqualTo(task2);
 
     }
 

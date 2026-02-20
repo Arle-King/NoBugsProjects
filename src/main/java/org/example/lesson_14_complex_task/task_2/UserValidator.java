@@ -27,7 +27,7 @@ public class UserValidator <T extends User> {
             }
             System.out.println("Всё гуд");
             return true;
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | InvalidUserException e) {
             System.out.println(e.getMessage());
         }
         return false;

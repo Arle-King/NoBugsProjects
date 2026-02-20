@@ -37,12 +37,12 @@ public class Task<T> implements Comparable<Task<T>> {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Task<?> task = (Task<?>) o;
-        return isStatus == task.isStatus && priority == task.priority && Objects.equals(id, task.id) && Objects.equals(date, task.date);
+        return Objects.equals(id, task.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, isStatus, priority, date);
+        return Objects.hashCode(id);
     }
 
     @Override

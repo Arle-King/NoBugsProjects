@@ -1,14 +1,11 @@
 package org.example.lesson_14_complex_task.task_6;
 
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TaskService<T extends Task> {
 
-    private PriorityQueue<Task> priorityQueue;
+    private PriorityQueue<T> priorityQueue;
 
     public TaskService() {
         priorityQueue = new PriorityQueue<>();
@@ -35,14 +32,14 @@ public class TaskService<T extends Task> {
                 .collect(Collectors.toCollection(PriorityQueue::new ));
     }
 
-    public Deque<Task> sortAbcByDate() {
+    public List<Task> sortAbcByDate() {
         return priorityQueue.stream().sorted(Comparator.comparing(Task::getDate))
-                .collect(Collectors.toCollection(LinkedList::new));
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
-    public PriorityQueue<Task> sortDeskByDate() {
+    public List<Task> sortDeskByDate() {
         return priorityQueue.stream().sorted(Comparator.comparing(Task::getDate, Comparator.reverseOrder()))
-                .collect(Collectors.toCollection(PriorityQueue::new));
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public PriorityQueue<Task> getPriorityQueue() {

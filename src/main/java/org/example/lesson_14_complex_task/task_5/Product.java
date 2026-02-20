@@ -1,5 +1,7 @@
 package org.example.lesson_14_complex_task.task_5;
 
+import java.util.Objects;
+
 public class Product {
 
     private String name;
@@ -24,5 +26,15 @@ public class Product {
         return category;
     }
 
-    //Тут бы хорошо переопределить equals и hashCode, но тз...
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return price == product.price && Objects.equals(name, product.name) && Objects.equals(category, product.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, category);
+    }
 }

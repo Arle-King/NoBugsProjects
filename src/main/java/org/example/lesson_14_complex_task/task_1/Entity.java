@@ -1,5 +1,7 @@
 package org.example.lesson_14_complex_task.task_1;
 
+import java.util.Objects;
+
 public class Entity {
 
     private String name;
@@ -22,5 +24,17 @@ public class Entity {
 
     public boolean isActive() {
         return isActive;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Entity entity = (Entity) o;
+        return age == entity.age && isActive == entity.isActive && Objects.equals(name, entity.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, isActive);
     }
 }

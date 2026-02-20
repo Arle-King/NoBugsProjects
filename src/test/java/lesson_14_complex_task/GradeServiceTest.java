@@ -1,9 +1,11 @@
 package lesson_14_complex_task;
 
+import org.assertj.core.api.Assert;
 import org.assertj.core.api.SoftAssertions;
 import org.example.lesson_14_complex_task.task_3.GradeService;
 import org.example.lesson_14_complex_task.task_3.InvalidGradeException;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -39,11 +41,7 @@ public class GradeServiceTest {
         softAssertions.assertThat(gradeService.getAverage("Math2")).as("").isEqualTo(0);
 
         //Проверка на отрицательную оценку
-        try {
-            gradeService.addGrade("Egor", "Math", -90);
-        } catch (InvalidGradeException e) {
-            softAssertions.assertThat(e.getMessage()).as("").isEqualTo("Оценка -90 невалидна");
-        }
+        Assertions.assertThrows(InvalidGradeException.class, () -> gradeService.addGrade("Egor", "Math", -90), "Оценка -90 невалидна");
 
         // Добавис оценку другого типа
         gradeService.addGrade("Egor", "Math", 80.0);

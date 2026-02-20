@@ -43,7 +43,7 @@ public class EntityManagerTest {
 
         entityManager.add(entity1);
         softAssertions.assertThat(entityManager.getEntityes().size()).as("Размер коллекции не соответствует ожидаемому").isEqualTo(biginSize + 1);
-        softAssertions.assertThat(entityManager.getEntityes().getLast()).as("equals не переопределён").isEqualTo(new Entity(entity1.getName(), entity1.getAge(), entity1.isActive()));
+        softAssertions.assertThat(entityManager.getEntityes().get(entityManager.getEntityes().size() - 1)).as("equals не переопределён").isEqualTo(new Entity(entity1.getName(), entity1.getAge(), entity1.isActive()));
 
         biginSize = entityManager.getEntityes().size();
         entityManager.add(entity2);

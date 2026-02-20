@@ -60,9 +60,9 @@ public class MovieServiceTest {
         movieService.addGrade(movie3, rating3);
 
         assertSoftly(softly  -> {
-            softly .assertThat(movieService.sortMovie().get(0)).as("").isEqualTo(rating3);
-            softly .assertThat(movieService.sortMovie().get(1)).as("").isEqualTo(rating1);
-            softly .assertThat(movieService.sortMovie().get(2)).as("").isEqualTo(rating2);
+            softly .assertThat(movieService.sortMovie().get(0)).as("").isEqualTo(movie3);
+            softly .assertThat(movieService.sortMovie().get(1)).as("").isEqualTo(movie1);
+            softly .assertThat(movieService.sortMovie().get(2)).as("").isEqualTo(movie2);
         });
     }
 

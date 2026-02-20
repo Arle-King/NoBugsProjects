@@ -1,7 +1,5 @@
 package org.example.lesson_14_complex_task.task_4;
 
-import org.example.lesson_14_complex_task.task_3.InvalidGradeException;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,8 +15,8 @@ public class MovieService {
     }
 
     public synchronized void addGrade(Movie movie, Rating grade) {
-        if (grade.getGrade().doubleValue() <= 1 && grade.getGrade().doubleValue() >= 10) {
-            throw new InvalidGradeException("Оценка " + grade + " невалидна");
+        if (grade.getGrade().doubleValue() < 1 || grade.getGrade().doubleValue() > 10) {
+            throw new InvalidRatingException("Оценка " + grade + " невалидна");
         }
 
         map.computeIfAbsent(movie, k -> new ArrayList<>()).add(grade);

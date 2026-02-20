@@ -1,10 +1,12 @@
 package lesson_14_complex_task;
 
 import org.assertj.core.api.SoftAssertions;
+import org.example.lesson_14_complex_task.task_3.InvalidGradeException;
 import org.example.lesson_14_complex_task.task_5.InventoryService;
 import org.example.lesson_14_complex_task.task_5.OutOfStockException;
 import org.example.lesson_14_complex_task.task_5.Product;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -39,7 +41,8 @@ public class InventoryServiceTest {
 
     @Test
     public void isInventoryClosedTest() {
-        softAssertions.assertThat(inventoryService.getProducts("Game")).as("").isEqualTo(null);
+        Assertions.assertThrows(OutOfStockException.class, () -> inventoryService.getProducts("Game"), "");
+        Assertions.assertThrows(OutOfStockException.class, () -> inventoryService.filterByPrice(100, 400), "");
         softAssertions.assertThat(inventoryService.addProduct(product1)).as("").isEqualTo(false);
     }
 
@@ -56,7 +59,7 @@ public class InventoryServiceTest {
         beginSize = 0;
         inventoryService.addProduct(product1);
         softAssertions.assertThat(inventoryService.getProducts(product1.getCategory()).size()).as("").isEqualTo(beginSize + 1);
-        softAssertions.assertThat(inventoryService.getProducts(product1.getCategory()).getLast()).as("Тут мы падаем, потому что equals и hashCode не переопределены").isEqualTo(new Product(product1.getName(), product1.getPrice(), product1.getCategory()));
+        softAssertions.assertThat(inventoryService.getProducts(product1.getCategory()).get(0)).as("Тут мы падаем, потому что equals и hashCode не переопределены").isEqualTo(new Product(product1.getName(), product1.getPrice(), product1.getCategory()));
 
         beginSize = inventoryService.getProducts(product1.getCategory()).size();
         inventoryService.addProduct(product2);

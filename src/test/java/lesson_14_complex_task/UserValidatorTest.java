@@ -60,14 +60,7 @@ public class UserValidatorTest {
         UserValidator.validationEnabled = true;
         userValidator.setUser(new User(name, age, email));
 
-        try {
-            softAssertions.assertThat(userValidator.start()).isEqualTo(resolt);
-        } catch (InvalidUserException e) {
-            System.out.println("Валидация пошла не по плану с данными: "
-                    + "Имя: " + name
-                    + ", Возраст: " + age
-                    + ", Email: " + email);
-        }
+        softAssertions.assertThat(userValidator.start()).isEqualTo(resolt);
     }
 
     public static Stream<Arguments> providerUser() {

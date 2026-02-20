@@ -30,6 +30,7 @@ public class EntityManager<T extends Entity> {
     }
 
     public List<T> filterByName(String name) {
+        if (name == null) throw new IllegalArgumentException("Null name");
         return entityes.stream()
                 .filter(value -> name.equals(value.getName()))
                 .collect(Collectors.toList());
