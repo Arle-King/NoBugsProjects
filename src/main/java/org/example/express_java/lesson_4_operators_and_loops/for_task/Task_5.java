@@ -1,0 +1,12 @@
+package org.example.express_java.lesson_4_operators_and_loops.for_task;
+
+import java.util.Scanner;
+
+public class Task_5 {
+    public static void main(String[] args) {
+
+        for (int i = 1; i < 11; i++) {
+            System.out.println(i);
+        }
+    }
+}
