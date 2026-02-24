@@ -4,7 +4,7 @@ abstract class Bird {
 
 }
 
-class FlyingBird extends Bird implements Flyble {
+class FlyingBird implements Flyble {
     @Override
     public void fly() {
         System.out.println("Птица летит");
@@ -15,7 +15,7 @@ class Penguin extends Bird {
 
 }
 
-class main {
+class Main {
     public void makeBirdFly (FlyingBird bird) {
         bird.fly();
     }
