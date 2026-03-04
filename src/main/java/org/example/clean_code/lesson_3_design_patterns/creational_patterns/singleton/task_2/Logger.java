@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Logger {
 
-    public List<String> logs;
+    private List<String> logs;
 
     private static Logger logger;
 
@@ -18,5 +18,13 @@ public class Logger {
             logger = new Logger();
         }
         return logger;
+    }
+
+    public List<String> getLogs() {
+        return logs;
+    }
+
+    public void addLog(String log) {
+        logs.add(log);
     }
 }

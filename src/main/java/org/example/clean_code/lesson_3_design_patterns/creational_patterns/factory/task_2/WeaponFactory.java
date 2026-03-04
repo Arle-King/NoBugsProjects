@@ -3,7 +3,7 @@ package org.example.clean_code.lesson_3_design_patterns.creational_patterns.fact
 public class WeaponFactory extends WeaponCreated{
 
     @Override
-    Weapon createWeapon(String type) {
+    public Weapon createWeapon(String type) {
         return switch (type) {
             case "Sword" -> new Sword();
             case "Bow" -> new Bow();

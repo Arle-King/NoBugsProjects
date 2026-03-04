@@ -10,6 +10,6 @@ public class Door {
     }
 
     protected String doorLock() {
-        return "Дверь заблокированна";
+        return "Дверь заблокирована";
     }
 }

@@ -7,15 +7,15 @@ public class DoorFacade {
         this.door = door;
     }
 
-    public void DoorOpen() {
+    public void doorOpen() {
         System.out.println(door.doorOpen());
     }
 
-    public void DoorClose () {
+    public void doorClose () {
         System.out.println(door.doorClose());
     }
 
-    public void DoorLock () {
+    public void doorLock () {
         System.out.println(door.doorLock());
     }
 }

@@ -8,7 +8,7 @@ public class Character {
 
     public Character(Builder builder) {
         this.health = builder.health;
-        this.damage = builder.health;
+        this.damage = builder.damage;
         this.armor = builder.armor;
         this.magic = builder.magic;
     }

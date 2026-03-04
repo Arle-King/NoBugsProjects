@@ -5,10 +5,10 @@ import org.example.clean_code.lesson_3_design_patterns.creational_patterns.abstr
 import org.example.clean_code.lesson_3_design_patterns.creational_patterns.abstract_factory.task_2.menu.Menu;
 import org.example.clean_code.lesson_3_design_patterns.creational_patterns.abstract_factory.task_2.window.Window;
 
-public class CreateFactory {
+public class StylePrinter {
     private final Factory factory;
 
-    public CreateFactory (Factory factory) {
+    public StylePrinter(Factory factory) {
         this.factory = factory;
     }
 

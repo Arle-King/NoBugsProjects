@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         DoorFacade doorFacade = new DoorFacade(new Door());
 
-        doorFacade.DoorOpen();
-        doorFacade.DoorClose();
-        doorFacade.DoorLock();
+        doorFacade.doorOpen();
+        doorFacade.doorClose();
+        doorFacade.doorLock();
     }
 }

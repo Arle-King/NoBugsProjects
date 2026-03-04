@@ -2,31 +2,50 @@ package org.example.clean_code.lesson_3_design_patterns.creational_patterns.sing
 
 public class ConfigurationManager {
 
-    public String url;
-    public String name;
-    public String password;
+    private String url;
+    private String name;
+    private String password;
 
-    public String filePath;
+    private String filePath;
 
-    public int lvlLog;
+    private int lvlLog;
 
     private static ConfigurationManager configurationManager;
 
-    private ConfigurationManager() {
-        url = "https//";
-        name = "root";
-        password = "root";
+    private ConfigurationManager(String url, String name, String password, String filePath, int lvlLog) {
+        this.url = url;
+        this.name = name;
+        this.password = password;
 
-        filePath = "/";
+        this.filePath = filePath;
 
-        lvlLog = 0;
+        this.lvlLog = lvlLog;
     };
 
-    public static ConfigurationManager getConfigurationManager() {
+    public static ConfigurationManager getConfigurationManager(String url, String name, String password, String filePath, int lvlLog) {
         if (configurationManager == null) {
-            configurationManager = new ConfigurationManager();
+            configurationManager = new ConfigurationManager(url, name, password, filePath, lvlLog);
         }
         return configurationManager;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public int getLvlLog() {
+        return lvlLog;
+    }
 }

@@ -5,12 +5,12 @@ import org.example.clean_code.lesson_3_design_patterns.creational_patterns.abstr
 
 public class Main {
     public static void main(String[] args) {
-        CreateFactory mac = new CreateFactory(new MacFactory());
+        StylePrinter mac = new StylePrinter(new MacFactory());
         mac.print();
 
         System.out.println();
 
-        CreateFactory win = new CreateFactory(new WinFactory());
+        StylePrinter win = new StylePrinter(new WinFactory());
         win.print();
 
     }
