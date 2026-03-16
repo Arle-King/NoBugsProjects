@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println();
 
-        String mowVideoPath = "path/to/example.avi";
+        String mowVideoPath = "path/to/example.mov";
         Video mowVideo = videoService.uploadVideo(mowVideoPath);
         Stream stream2 = videoService.streamVideo(mowVideo.getId());
         System.out.println("Streaming video in MP4 format, Video ID: " + mowVideo.getId());
@@ -24,7 +24,7 @@ public class Main {
         System.out.println();
 
 
-        String wmvVideoPath = "path/to/example.avi";
+        String wmvVideoPath = "path/to/example.wmv";
         Video wmvVideo = videoService.uploadVideo(wmvVideoPath);
         Stream stream3 = videoService.streamVideo(wmvVideo.getId());
         System.out.println("Streaming video in MP4 format, Video ID: " + wmvVideo.getId());

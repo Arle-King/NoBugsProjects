@@ -10,8 +10,8 @@ public class UrlStorage {
         urlBase = new HashMap<>();
     }
 
-    public Map<String, String> getUrlBase() {
-        return urlBase;
+    public String getUrl(String key) {
+        return urlBase.getOrDefault(key, "No url");
     }
 
     public String add(String key, String value) {

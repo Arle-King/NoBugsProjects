@@ -4,12 +4,18 @@ import java.util.UUID;
 
 public class Video {
     private UUID id;
+    private String path;
 
-    public Video() {
+    public Video(String path) {
         this.id = UUID.randomUUID();
+        this.path = path;
     }
 
     public UUID getId() {
         return id;
+    }
+
+    public String getPath() {
+        return path;
     }
 }

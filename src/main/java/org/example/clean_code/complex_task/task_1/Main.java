@@ -1,12 +1,10 @@
 package org.example.clean_code.complex_task.task_1;
 
-import org.example.clean_code.complex_task.task_1.strategy.Base62Strategy;
-
-import java.util.List;
+import org.example.clean_code.complex_task.task_1.strategy.Base64Strategy;
 
 public class Main {
     public static void main(String[] args) {
-        UrlShortenerService shortenerService = new UrlShortenerService(new ShortenerFactory(new Base62Strategy()));
+        UrlShortenerService shortenerService = new UrlShortenerService(new ShortenerFactory(new Base64Strategy()));
 
         String shortUrl = shortenerService.shortenUrl("https://example.com/very/long/url1");
         System.out.println("Short URL: " + shortUrl);
@@ -31,15 +29,5 @@ public class Main {
 
         String longUrl3 = shortenerService.expandUrl(shortUrl3);
         System.out.println("Original URL: " + longUrl3);
-
-        int i= 0;
-
-        for (;i > 0;) {
-
-        }
-
-        System.out.println(i);
     }
-
-
 }

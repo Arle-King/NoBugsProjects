@@ -25,7 +25,7 @@ public class VideoService {
             default -> throw new IllegalArgumentException("No adapter");
         };
 
-        return this.videoAdapter.uploadVideo();
+        return this.videoAdapter.uploadVideo(videoPath);
     }
 
     public Stream streamVideo(UUID id) {

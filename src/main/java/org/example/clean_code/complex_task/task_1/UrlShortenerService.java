@@ -25,6 +25,6 @@ public class UrlShortenerService {
     }
 
     public String expandUrl(String url) {
-        return urlStorage.getUrlBase().getOrDefault(url, "No url");
+        return urlStorage.getUrl(url);
     }
 }
